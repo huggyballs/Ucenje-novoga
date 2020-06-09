@@ -45,6 +45,7 @@ def main():
         pass
     except KeyboardInterrupt:
         print("Kraj rograma!")
+        clf.close()
         pass
 
 if __name__ == '__main__':
