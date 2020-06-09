@@ -14,7 +14,7 @@ def main():
 
                 unos = input()
 
-                if input == 1:
+                if unos == 1:
                     print("citanje")
                     starttime = time.time()
                     userID = ''
@@ -34,7 +34,7 @@ def main():
                             break
 
                     break
-                elif input == 3:
+                elif unos == 3:
                     print("nema citanja")
                     break
                 else:
