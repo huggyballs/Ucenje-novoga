@@ -92,6 +92,7 @@ def main():
                             pass
                         except:
                             print("Nesto ne valja!")
+                            #except se izvrši, tu znači možeš u glavnom programu i umanjit
                     break
                 elif unos == 3:
                     print("nema citanja")
