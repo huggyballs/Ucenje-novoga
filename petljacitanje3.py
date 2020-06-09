@@ -65,7 +65,7 @@ class ExpectTimeout(object):
                 exc_type, exc_value)[-1].strip()
 
         if not self.mute:
-            print(lines, "(expected)", file=sys.stderr)
+            print("(expected)")
         return True  # Ignore it
 
     def cancel(self):
