@@ -32,6 +32,7 @@ def main():
                             print("Uspjesno citanje!")
                             print(userID)
                             break
+                        pass
 
                     break
                 elif unos == 3:
