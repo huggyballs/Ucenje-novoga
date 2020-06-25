@@ -11,8 +11,8 @@ db = mysql.connector.connect(
 mycursor = db.cursor()
 
 try:
-	mycursor.execute("CREATE TABLE Users (id int PRIMARY KEY NOT NULL AUTO_INCREMENT, name VARCHAR(50) NOT NULL)")
-	mycursor.execute("CREATE TABLE Devices(id2 int PRIMARY KEY NOT NULL AUTO_INCREMENT, userid int NOT NULL, deviceid VARCHAR(25))")
+	mycursor.execute("CREATE TABLE Users2 (id int PRIMARY KEY NOT NULL AUTO_INCREMENT, name VARCHAR(50) NOT NULL)")
+	mycursor.execute("CREATE TABLE Devices (id2 int PRIMARY KEY NOT NULL AUTO_INCREMENT, userid int NOT NULL, deviceid VARCHAR(25))")
 	pass
 except:
 	print("Ne valja!")
