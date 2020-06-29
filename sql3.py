@@ -29,12 +29,16 @@ except:
 #db.commit()
 
 #last_id = mycursor.lastrowid
+#print(last_id)
 #uredjaj = int(input("Unesite id uredjaja: "))
 
 #mycursor.execute("INSERT INTO Devices (userid, deviceid) VALUES (%s,%s)", (last_id, uredjaj))
 #db.commit()
 
 mycursor.execute("SELECT * FROM Family")
+
+last_id = mycursor.lastrowid
+print(last_id)
 
 for x in mycursor:
     print(x)
@@ -47,12 +51,19 @@ for x in mycursor:
 mycursor.execute("SELECT userid FROM Devices WHERE deviceid = '1234'")
 
 devajs = mycursor.fetchone()
-devajs2 = int(''.join(map(str, devajs))) #BITNO! Nacin pretvaranja tuplea u broj
+devajs = int(''.join(map(str, devajs))) #BITNO! Nacin pretvaranja tuplea u broj
 print("grabimo...")
-print (devajs2)
+print (devajs)
 
-mycursor.execute("SELECT * FROM Family WHERE id = %s", (devajs2,))
+mycursor.execute("SELECT * FROM Family WHERE id = %s", (devajs,))
 
 korisnik = mycursor.fetchone()
 print("grabimo...")
 print(korisnik)
+
+try:
+    mycursor.execute("SELECT * FROM Devices WHERE deviceid = '5293")
+    pass
+except:
+    print("Greska")
+    pass
