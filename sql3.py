@@ -60,7 +60,8 @@ mycursor.execute("SELECT * FROM Devices")
 for x in mycursor:
     print(x)
 
-mycursor.execute("SELECT userid FROM Devices WHERE deviceid = '1234'")
+devid = 1234
+mycursor.execute("SELECT userid FROM Devices WHERE deviceid = %s", (devid,))
 
 devajs = mycursor.fetchone()
 devajs = int(''.join(map(str, devajs))) #BITNO! Nacin pretvaranja tuplea u broj
