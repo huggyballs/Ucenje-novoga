@@ -22,6 +22,15 @@ try:
 except:
     pass
 
+try:
+    mycursor.execute("CREATE TABLE names (id3 int PRIMARY KEY NOT NULL AUTO_INCREMENT, name VARCHAR(30) NOT NULL)")
+    pass
+except:
+    print("postoji")
+    pass
+
+#ime2 = input("Unesite ime: ")
+#print(ime2)
 #ime = input("Unesite ime: ")
 #godine = int(input("Unesite godine: "))
 
@@ -33,6 +42,9 @@ except:
 #uredjaj = int(input("Unesite id uredjaja: "))
 
 #mycursor.execute("INSERT INTO Devices (userid, deviceid) VALUES (%s,%s)", (last_id, uredjaj))
+#db.commit()
+
+#mycursor.execute("INSERT INTO names (name) VALUES(%s,)", ime2)
 #db.commit()
 
 mycursor.execute("SELECT * FROM Family")
@@ -60,6 +72,11 @@ mycursor.execute("SELECT * FROM Family WHERE id = %s", (devajs,))
 korisnik = mycursor.fetchone()
 print("grabimo...")
 print(korisnik)
+
+#mycursor.execute("SELECT * FROM names WHERE name = %s", (ime2))
+#drugoime = mycursor.fetchone()
+#print("grabimo...")
+#print(drugoime)
 
 try:
     mycursor.execute("SELECT * FROM Devices WHERE deviceid = '5293")
