@@ -1,7 +1,17 @@
 import logging
 
-logging.basicConfig(filename='test.log', level=logging.DEBUG,
-    format='%(asctime)s:%(levelname)s:%(message)s')
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(message)s')
+filehandler = logging.FileHandler('test.log')
+filehandler.setFormatter(formatter)
+
+stream = logging.StreamHandler()
+stream.setFormatter(formatter)
+
+logger.addHandler(filehandler)
+logger.addHandler(stream)
 
 def add (x, y):
 
@@ -23,13 +33,13 @@ br1 = 20
 br2= 5
 
 zbroj = add(br1, br2)
-logging.debug('Zbroj: {} + {} = {}'.format(br1, br2, zbroj))
+logger.debug('Zbroj: {} + {} = {}'.format(br1, br2, zbroj))
 
 razlika = substract(br1, br2)
-logging.debug('Razlika: {} - {} = {}'.format(br1, br2, razlika))
+logger.debug('Razlika: {} - {} = {}'.format(br1, br2, razlika))
 
 umnozak = multiply(br1, br2)
-logging.debug('Umnozak: {} * {} = {}'.format(br1, br2, umnozak))
+logger.debug('Umnozak: {} * {} = {}'.format(br1, br2, umnozak))
 
 dijel = divide(br1, br2)
-logging.debug('Dijeljenje: {} / {} = {}'.format(br1, br2, dijel))
+logger.debug('Dijeljenje: {} / {} = {}'.format(br1, br2, dijel))
