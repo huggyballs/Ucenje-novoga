@@ -8,6 +8,8 @@ console.log(name);
 const someNumber = 0.3;
 console.log(someNumber);
 
+//globalne varijable se deklariraju bez var, let i const
+
 //Objekti
 let osoba = {
     ime: 'Marko',
@@ -47,6 +49,17 @@ function kvadrat(broj){
     return broj * broj;
 }
 console.log(kvadrat(2))
+
+function nextInLine(arr, item) {
+    arr.push(item);
+
+    return arr.shift();
+}
+
+var testArr = [1,2,3,4,5];
+
+console.log(nextInLine(testArr, 6));
+console.log('Red: ' + JSON.stringify(testArr));
 
 // inkrementacija varijabla++;
 //dekrementacija varijabla--;
