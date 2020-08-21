@@ -26,6 +26,16 @@ let boje = ['crvena', 'bijela', 'plava'];
 console.log(boje[1])
 boje[3] = 'crna';
 console.log(boje);
+let gnijezdoArray = [['crvena', 1], ['bijela', 2], ['plava', 3]];
+let odabir = gnijezdoArray[0][1];
+console.log(odabir);
+gnijezdoArray.push(['crna', 4]); //dodaje na kraj
+console.log(gnijezdoArray);
+gnijezdoArray.pop(); //izbacuje s kraja
+console.log(gnijezdoArray);
+//gnijezdoArray.shift(); izbacuje s početka
+//gnijezdoArray.unshift(); dodaje na kraj
+
 
 //Funkcije
 function pozdrav(ime, prezime){
@@ -37,3 +47,13 @@ function kvadrat(broj){
     return broj * broj;
 }
 console.log(kvadrat(2))
+
+// inkrementacija varijabla++;
+//dekrementacija varijabla--;
+
+let stringName = Milojko;
+//dužina stringa: 
+stringName.length;
+let zadnjeSlovo = stringName[stringName.length - 1];
+let nekoSlovo = stringName[3];
+
