@@ -17,6 +17,11 @@ let osoba = {
 };
 console.log(osoba);
 
+osoba.visina = 186; //dodavanje novih svojstava u objekt
+console.log(osoba);
+delete osoba.visina; //brisanje
+console.log(osoba);
+
 osoba.ime = 'Franjo';
 console.log(osoba.ime);
 
@@ -63,6 +68,7 @@ console.log('Red: ' + JSON.stringify(testArr));
 
 // inkrementacija varijabla++;
 //dekrementacija varijabla--;
+//parseInt pretvara string u int
 
 let stringName = Milojko;
 //dužina stringa: 
